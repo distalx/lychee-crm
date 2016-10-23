@@ -23,6 +23,13 @@ FlowRouter.route('/', {
   },
 });
 
+FlowRouter.route('/about', {
+  name: 'about',
+  action() {
+    BlazeLayout.render('layout', { main: 'about' });
+  },
+});
+
 FlowRouter.route('/account', {
   name: 'account',
   action() {

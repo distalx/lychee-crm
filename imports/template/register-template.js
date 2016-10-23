@@ -6,3 +6,4 @@ import './account';
 import './order';
 import './authorization';
 import './dashboard';
+import './about';
