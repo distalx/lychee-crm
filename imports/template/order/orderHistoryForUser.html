@@ -1,0 +1,48 @@
+<template name="orderHistoryForUser">
+  {{#if Template.subscriptionsReady}}
+
+
+    <table class="table table-striped table-hover ">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Order Id</th>
+          <th>Amount</th>
+          <th>Package</th>
+          <th>Placed At</th>
+
+        </tr>
+      </thead>
+      {{#each orders}}
+
+        <tbody>
+          <tr>
+            <th>#</th>
+            <!-- <th><a href="{{pathFor 'cp order by id'}}/{{_id}}">{{_id}}</a></th> -->
+            <th>{{_id}}</th>
+            <th>{{amount}}</th>
+            <th>{{package}}</th>
+            <th>{{cleanDateFormatCalendar createdAt}}</th>
+          </tr>
+        </tbody>
+
+      {{else}}
+        <tbody>
+          <tr>
+            <td colspan="5">
+              <div class="jumbotron align-center">
+
+                  <div class="row text-center">
+
+                      <h5>No Orders !</h5>
+
+                  </div>
+
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      {{/each}}
+    </table>
+  {{/if}}
+</template>

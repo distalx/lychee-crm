@@ -1,0 +1,67 @@
+<template name="orderHistoryForOwner">
+
+    {{#if Template.subscriptionsReady}}
+
+
+      <table class="table table-striped table-hover ">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Order Id</th>
+            <th>From</th>
+            <th>Amount</th>
+            <th>Package</th>
+            <th>Placed At</th>
+            <th>Status</th>
+            <th></th>
+
+          </tr>
+        </thead>
+        {{#each orders}}
+
+          <tbody>
+            <tr class="{{#unless markedAsOpen}} markAsRead{{/unless}}">
+              <th>#</th>
+              <!-- <th><a href="{{pathFor 'cp order by id'}}/{{_id}}">{{_id}}</a></th> -->
+              <th>{{_id}}</th>
+              <th>{{email}}</th>
+              <th>{{amount}}</th>
+              <th>{{package}}</th>
+              <th>{{cleanDateFormatCalendar createdAt}}</th>
+              <th>{{type}}</th>
+              <th>{{#if markedAsOpen}}
+                      <span class="fa-stack text-success">
+                        <i class="fa fa-check fa-stack-1x" style="margin-left:4px"></i>
+                        <i class="fa fa-check fa-inverse fa-stack-1x" style="margin-left:-3px;"></i>
+                        <i class="fa fa-check  fa-stack-1x" style="margin-left:-4px"></i>
+                      </span>
+                  {{else}}
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                  {{/if}}
+              </th>
+            </tr>
+          </tbody>
+
+        {{else}}
+          <tbody>
+            <tr>
+              <td colspan="5">
+                <div class="jumbotron align-center">
+
+                    <div class="row text-center">
+
+                        <h5>No Orders !</h5>
+
+                    </div>
+
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        {{/each}}
+      </table>
+    {{/if}}
+
+
+
+</template>

@@ -1,0 +1,23 @@
+{
+  "public": {
+    "app":{
+      "name":"lychee CRM",
+      "email": "lycheeCRM@example.com"
+    },
+    "stripe":{
+      "publicKey" : "stripe_public_key"
+    }
+  },
+  "private": {
+    "stripe": {
+      "privateKey":"stripe_private_key"
+    },
+    "kadira": {
+      "appId": "appId",
+      "appSecret": "appSecret"
+    },
+    "mailgun":{
+      "SMTP": "mailgun_smtp",
+    }
+  }
+}

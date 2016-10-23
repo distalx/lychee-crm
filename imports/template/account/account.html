@@ -1,0 +1,39 @@
+<template name="account">
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <div class="page-header">
+        <h4>Account</h4>
+      </div>
+      <div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+          <li role="presentation"><a href="#order-history" aria-controls="order-history" role="tab" data-toggle="tab">Order History</a></li>
+
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="info">
+
+            <br>
+            <br>
+            <br>
+            INFO
+          </div>
+          <div role="tabpanel" class="tab-pane" id="order-history">
+            {{> orderHistoryForUser }}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</template>

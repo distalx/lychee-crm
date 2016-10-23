@@ -1,0 +1,81 @@
+<template name="landing">
+  <div class="container">
+    {{#if currentUser}}
+
+      <div class="page-header">
+        <h4>Welcome !</h4>
+      </div>
+    {{/if}}
+    {{#unless currentUser}}
+
+        <div class="row">
+          {{#unless processing}}
+          <p class="alert alert-warning">To demo, the card number <strong>4242 4242 4242 4242</strong>, any <em>future</em> expiration date, and any 3 digit security code (e.g 555)</p>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <!-- PRICE ITEM -->
+            <div class="panel price panel-grey">
+              <div class="panel-heading arrow_box text-center">
+              <h3>Silver</h3>
+              </div>
+              <div class="panel-body text-center">
+                <p class="lead" style="font-size:40px"><strong>$10 / month</strong></p>
+              </div>
+              <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item"><i class="icon-ok text-success"></i> Personal use</li>
+                <li class="list-group-item"><i class="icon-ok text-success"></i> Unlimited projects</li>
+                <li class="list-group-item"><i class="icon-ok text-success"></i> 27/7 support</li>
+              </ul>
+              <div class="panel-footer">
+                <a class="btn btn-lg btn-block btn-primary" data-service="silver-pack" href="#">BUY NOW!</a>
+              </div>
+            </div>
+            <!-- /PRICE ITEM -->
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <!-- PRICE ITEM -->
+            <div class="panel price panel-grey">
+              <div class="panel-heading arrow_box text-center">
+              <h3>Golden</h3>
+              </div>
+              <div class="panel-body text-center">
+                <p class="lead" style="font-size:40px"><strong>$20 / month</strong></p>
+              </div>
+              <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item"><i class="icon-ok text-success"></i> Personal use</li>
+                <li class="list-group-item"><i class="icon-ok text-success"></i> Unlimited projects</li>
+                <li class="list-group-item"><i class="icon-ok text-success"></i> 27/7 support</li>
+              </ul>
+              <div class="panel-footer">
+                <a class="btn btn-lg btn-block btn-primary" data-service="gold-pack" href="#">BUY NOW!</a>
+              </div>
+            </div>
+            <!-- /PRICE ITEM -->
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <!-- PRICE ITEM -->
+            <div class="panel price panel-grey">
+              <div class="panel-heading arrow_box text-center">
+              <h3>Platinum</h3>
+              </div>
+              <div class="panel-body text-center">
+                <p class="lead" style="font-size:40px"><strong>$30 / month</strong></p>
+              </div>
+              <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item"><i class="icon-ok text-success"></i> Personal use</li>
+                <li class="list-group-item"><i class="icon-ok text-success"></i> Unlimited projects</li>
+                <li class="list-group-item"><i class="icon-ok text-success"></i> 27/7 support</li>
+              </ul>
+              <div class="panel-footer">
+                <a class="btn btn-lg btn-block btn-primary" data-service="platinum-pack" href="#">BUY NOW!</a>
+              </div>
+            </div>
+            <!-- /PRICE ITEM -->
+          </div>
+          {{else}}
+            <p class="alert alert-warning"><i class="fa fa-refresh fa-spin"></i> Processing payment...</p>
+          {{/unless}}
+        </div>
+
+    {{/unless}}
+	</div>
+</template>
